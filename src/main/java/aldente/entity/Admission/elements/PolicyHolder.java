@@ -1,12 +1,7 @@
 
-package omipos.entity.Admission.elements;
+package aldente.entity.Admission.elements;
 
-import com.fasterxml.jackson.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
-
-public class LifeAssured {
+public class PolicyHolder {
 
     private String stateId;
     private String dateOfBirth;
@@ -21,7 +16,7 @@ public class LifeAssured {
      * No args constructor for use in serialization
      *
      */
-    public LifeAssured() {
+    public PolicyHolder() {
     }
 
     /**
@@ -35,7 +30,7 @@ public class LifeAssured {
      * @param dateOfBirth
      * @param contactNo
      */
-    public LifeAssured(String stateId, String dateOfBirth, String placeOfBirth, String gender, String surname, String address, String contactNo, String clientId) {
+    public PolicyHolder(String stateId, String dateOfBirth, String placeOfBirth, String gender, String surname, String address, String contactNo, String clientId) {
         super();
         this.stateId = stateId;
         this.dateOfBirth = dateOfBirth;

@@ -1,4 +1,4 @@
-package omipos.entity.Admission;
+package aldente.entity.Admission;
 
 import com.google.gson.Gson;
 import org.apache.flink.api.common.serialization.SerializationSchema;

@@ -9,7 +9,7 @@
 # Extend vert.x image
 FROM vertx/vertx3
 
-ENV VERTICLE_NAME omipos.MainVerticle
+ENV VERTICLE_NAME aldente.MainVerticle
 ENV VERTICLE_FILE target/kafka-flink-1.0.0-SNAPSHOT-fat.jar
 
 # Set the location of the verticles

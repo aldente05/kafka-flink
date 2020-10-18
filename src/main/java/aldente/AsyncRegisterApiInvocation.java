@@ -1,14 +1,12 @@
-package omipos;
+package aldente;
 
-import com.couchbase.client.core.error.BucketExistsException;
-import com.couchbase.client.core.error.CouchbaseException;
 import com.couchbase.client.core.error.DocumentExistsException;
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.Cluster;
 import com.couchbase.client.java.json.JsonObject;
-import omipos.entity.MessageType;
-import omipos.entity.Register.RegisterRequest;
-import omipos.entity.Register.RegisterResponse;
+import aldente.entity.MessageType;
+import aldente.entity.Register.RegisterRequest;
+import aldente.entity.Register.RegisterResponse;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.async.ResultFuture;
 import org.apache.flink.streaming.api.functions.async.RichAsyncFunction;
@@ -115,6 +113,4 @@ public class AsyncRegisterApiInvocation extends RichAsyncFunction<RegisterReques
       logger.error("Exception [HTTP] Client " + ex);
     }
   }
-
-
 }

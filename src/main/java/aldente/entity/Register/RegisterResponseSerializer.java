@@ -1,4 +1,4 @@
-package omipos.entity.Register;
+package aldente.entity.Register;
 
 import com.google.gson.Gson;
 import org.apache.flink.api.common.serialization.SerializationSchema;

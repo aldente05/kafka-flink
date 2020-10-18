@@ -1,4 +1,4 @@
-package omipos.entity;
+package aldente.entity;
 
 
 public enum MessageType {

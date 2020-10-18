@@ -1,15 +1,15 @@
-package omipos;
+package aldente;
 
-import omipos.config.FlinkKafkaConsumerConfig;
-import omipos.config.FlinkKafkaProducerConfig;
-import omipos.entity.Admission.AdmissionRequest;
-import omipos.entity.Admission.AdmissionRequestSchema;
-import omipos.entity.Admission.AdmissionResponse;
-import omipos.entity.Admission.AdmissionResponseSerializer;
-import omipos.entity.Register.RegisterRequest;
-import omipos.entity.Register.RegisterRequestSchema;
-import omipos.entity.Register.RegisterResponse;
-import omipos.entity.Register.RegisterResponseSerializer;
+import aldente.config.FlinkKafkaConsumerConfig;
+import aldente.config.FlinkKafkaProducerConfig;
+import aldente.entity.Admission.AdmissionRequest;
+import aldente.entity.Admission.AdmissionRequestSchema;
+import aldente.entity.Admission.AdmissionResponse;
+import aldente.entity.Admission.AdmissionResponseSerializer;
+import aldente.entity.Register.RegisterRequest;
+import aldente.entity.Register.RegisterRequestSchema;
+import aldente.entity.Register.RegisterResponse;
+import aldente.entity.Register.RegisterResponseSerializer;
 import org.apache.flink.streaming.api.datastream.AsyncDataStream;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
@@ -35,8 +35,11 @@ public class MainVerticle {
     Properties consumerPropAdmission = FlinkKafkaConsumerConfig.getKafkaConsumerConfig("admission", "flink-admission-group");
 
     // Create a flink consumer from the topic with a custom serializer for "Model Request"
-    FlinkKafkaConsumer010<RegisterRequest> consumerRegister = new FlinkKafkaConsumer010<>(consumerPropRegister.getProperty("topic"), new RegisterRequestSchema(), consumerPropRegister);
-    FlinkKafkaConsumer010<AdmissionRequest> consumerAdmission = new FlinkKafkaConsumer010<>(consumerPropAdmission.getProperty("topic"), new AdmissionRequestSchema(), consumerPropAdmission);
+    FlinkKafkaConsumer010<RegisterRequest> consumerRegister = new FlinkKafkaConsumer010<>(
+      consumerPropRegister.getProperty("topic"), new RegisterRequestSchema(), consumerPropRegister);
+
+    FlinkKafkaConsumer010<AdmissionRequest> consumerAdmission = new FlinkKafkaConsumer010<>(
+      consumerPropAdmission.getProperty("topic"), new AdmissionRequestSchema(), consumerPropAdmission);
 
     // Start reading partitions from the consumer group’s committed offsets in Kafka brokers
     consumerRegister.setStartFromGroupOffsets();

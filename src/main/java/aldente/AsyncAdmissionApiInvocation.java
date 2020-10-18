@@ -1,13 +1,12 @@
-package omipos;
+package aldente;
 
 import com.couchbase.client.core.error.CouchbaseException;
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.Cluster;
-import com.couchbase.client.java.json.JsonObject;
-import omipos.entity.Admission.AdmissionRequest;
-import omipos.entity.Admission.AdmissionResponse;
-import omipos.entity.MessageType;
-import omipos.helper.RequestHelperMethod;
+import aldente.entity.Admission.AdmissionRequest;
+import aldente.entity.Admission.AdmissionResponse;
+import aldente.entity.MessageType;
+import aldente.helper.RequestHelperMethod;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.async.ResultFuture;
 import org.apache.flink.streaming.api.functions.async.RichAsyncFunction;
@@ -40,7 +39,7 @@ public class AsyncAdmissionApiInvocation extends RichAsyncFunction<AdmissionRequ
   @Override
   public void open(Configuration parameters) {
     logger.info("Opening connection " + parameters.toString());
-    final Cluster cluster = Cluster.connect("localhost", "master-admission", "123456");
+    final Cluster cluster = Cluster.connect("localhost", "master-admission", "1234567890");
     bucket = cluster.bucket("admission");
     this.asyncHttpClient = new DefaultAsyncHttpClient();
   }

@@ -1,6 +1,6 @@
-package omipos.entity.Admission;
+package aldente.entity.Admission;
 
-import omipos.entity.MessageType;
+import aldente.entity.MessageType;
 
 /**
  * Created by f.putra on 7/22/20.

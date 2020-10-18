@@ -1,9 +1,9 @@
-package omipos.entity.Admission;
+package aldente.entity.Admission;
 
-import omipos.entity.Admission.elements.DetailLimit;
-import omipos.entity.Admission.elements.Eligibility;
-import omipos.entity.Admission.elements.LifeAssured;
-import omipos.entity.Admission.elements.PolicyHolder;
+import aldente.entity.Admission.elements.DetailLimit;
+import aldente.entity.Admission.elements.Eligibility;
+import aldente.entity.Admission.elements.LifeAssured;
+import aldente.entity.Admission.elements.PolicyHolder;
 
 import java.io.Serializable;
 import java.util.List;

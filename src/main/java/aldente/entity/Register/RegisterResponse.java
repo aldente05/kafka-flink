@@ -1,6 +1,6 @@
-package omipos.entity.Register;
+package aldente.entity.Register;
 
-import omipos.entity.MessageType;
+import aldente.entity.MessageType;
 
 public class RegisterResponse {
 

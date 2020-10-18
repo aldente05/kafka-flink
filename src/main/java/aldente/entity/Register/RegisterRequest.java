@@ -1,4 +1,4 @@
-package omipos.entity.Register;
+package aldente.entity.Register;
 
 import java.io.Serializable;
 

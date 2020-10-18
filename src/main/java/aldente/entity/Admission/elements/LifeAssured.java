@@ -1,7 +1,7 @@
 
-package omipos.entity.Admission.elements;
+package aldente.entity.Admission.elements;
 
-public class PolicyHolder {
+public class LifeAssured {
 
     private String stateId;
     private String dateOfBirth;
@@ -16,7 +16,7 @@ public class PolicyHolder {
      * No args constructor for use in serialization
      *
      */
-    public PolicyHolder() {
+    public LifeAssured() {
     }
 
     /**
@@ -30,7 +30,7 @@ public class PolicyHolder {
      * @param dateOfBirth
      * @param contactNo
      */
-    public PolicyHolder(String stateId, String dateOfBirth, String placeOfBirth, String gender, String surname, String address, String contactNo, String clientId) {
+    public LifeAssured(String stateId, String dateOfBirth, String placeOfBirth, String gender, String surname, String address, String contactNo, String clientId) {
         super();
         this.stateId = stateId;
         this.dateOfBirth = dateOfBirth;

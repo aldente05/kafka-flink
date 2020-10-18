@@ -1,5 +1,5 @@
 
-package omipos.entity.Admission.elements;
+package aldente.entity.Admission.elements;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

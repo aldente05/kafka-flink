@@ -1,10 +1,7 @@
 
-package omipos.entity.Admission.elements;
+package aldente.entity.Admission.elements;
 
 import com.fasterxml.jackson.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Eligibility {
 
